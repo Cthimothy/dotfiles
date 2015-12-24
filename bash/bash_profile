@@ -1,27 +1,10 @@
 ./.dropbox-dist/dropboxd > /dev/null 2>&1 &
-source ~/Dropbox/dotfiles/aliases/dagon_aliases.txt
-source ~/Dropbox/dotfiles/bashrc
 
 #PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[0;31m\]\h'; else echo '\[\033[0;33m\]\u\[\033[0;37m\]@\[\033[0;96m\]\h'; fi)\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[00;33m\]λ \033[0m\]"
-
 export PS1="(\[\e[01;34m\]\w\[\e[0m\]) \[\e[01;33m\]\n λ \[\e[0m\]→ "
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scriptin
-#PATH=$PATH:$HOME/local/bin
-alias ev='geeknote'
-alias ll="ls -lh"
-#alias acs="apt-cache search"
-#alias aa="/usr/local/bin/mocp_display_album_art"
-alias scoff="xset dpms force off"
-alias mm="~/.moc/coverart.sh"
-#alias
-#bind -m vi-insert 'Control-l: clear-screen'
-#export GPGKEY=6AC2B42F
 export TEXINPUTS=.:$HOME/.emacs.d/elpa/auctex-11.88.8/latex:
-
-complete -F _todo t
-
-#rofi&
+#export GPGKEY=6AC2B42F
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scriptin
 
 cdm() {
     echo; echo "'Pushd'-ing current directory...'popd' to return."; echo

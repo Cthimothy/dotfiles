@@ -1,0 +1,10 @@
+alias ev="geeknote"
+alias dropbox='~/.dropbox-dist/dropboxd&  2>&1 > /dev/null'
+alias irssi='su - dop -c irssi'
+alias ll='ls -lh'
+alias ls='ls --color=auto'
+alias scoff='xset dpms force off'
+alias gip='curl icanhazip.com'
+alias tpadoff="synclient touchpadoff=1"
+alias tpadon="synclient touchpadoff=0"
+alias fire="host -t txt istheinternetonfire.com | cut -f 2 -d i \"'\"| cowsay -f moose"
