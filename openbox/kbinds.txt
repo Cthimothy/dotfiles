@@ -1,0 +1,41 @@
+o C-A-h          	GoToDesktop
+o C-A-l          	GoToDesktop
+o C-A-k          	GoToDesktop
+o C-A-j          	GoToDesktop
+o W-F1           	GoToDesktop
+o W-F2           	GoToDesktop
+o W-F3           	GoToDesktop
+o W-F4           	GoToDesktop
+o W-d            	ToggleShowDesktop
+o A-F4           	Close
+o A-Escape       	Lower
+o A-space        	client-menu
+x Print          	xfce4-screenshooter
+x A-Print        	scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ & viewnior ~/images/$f'
+o A-Tab          	NextWindow
+o A-S-Tab        	PreviousWindow
+o C-A-Tab        	NextWindow
+o W-S-Right      	DirectionalCycleWindows
+o W-S-Left       	DirectionalCycleWindows
+o W-S-Up         	DirectionalCycleWindows
+o W-S-Down       	DirectionalCycleWindows
+x A-z            	rofi -show run
+x A-F3           	~/.config/dmenu/dmenu-bind.sh
+x W-f            	thunar
+x W-t            	terminator
+x W-w            	x-www-browser
+x W-l            	cb-lock
+x W-e            	geany
+x W-m            	vlc
+x W-h            	terminator --command="htop"
+x W-v            	pavucontrol
+x W-x            	cb-exit
+o W-Tab          	client-list-combined-menu
+o W-space        	root-menu
+o A-C-q          	root-menu
+o W-Right        	GrowToEdgeEast
+o W-Left         	GrowToEdgeWest
+o W-Down         	GrowToEdgeSouth
+o W-Up           	GrowToEdgeNorth
+x W-A-Left       	cb-aerosnap --left
+x W-A-Right      	cb-aerosnap --right

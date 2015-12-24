@@ -1,0 +1,32 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#262626:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#141414:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
+    background_image = None
+    background_darkness = 0.92
+    cursor_shape = ibeam
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#ffffd4"
+    show_titlebar = False
+    font = DejaVu Sans Mono 10
+    background_color = "#141414"
+  [[games]]
+    scrollbar_position = hidden
+    background_image = None
+    palette = "#000000:#a57c2d:#76b576:#b6b65f:#52527b:#cd00cd:#00cdcd:#faebd7:#5c5959:#2a658f:#639d63:#adad4e:#47476a:#ff00ff:#00ffff:#ffffff"
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    cursor_blink = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

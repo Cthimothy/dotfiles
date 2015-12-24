@@ -1,0 +1,39 @@
+set nosmoothscroll
+set nodimhintcharacters
+set nativelinkorder
+set defaultnewtabpage
+let barposition = "bottom"
+let hintcharacters = "fgdhskal"
+unmap h
+unmap l
+unmap gyt
+unmap B
+unmap b
+map B :bookmarks<Space>
+map b :buffer<Space>
+map h previousTab
+map l nextTab
+map dl closetabRight
+map dh closetabLeft
+map <C-f> scrollPageDown
+map <C-b> scrollPageUp
+map y yankDocumentUrl
+map d closeTab
+let searchengine startpage = "https://startpage.com/do/search?query="
+let searchengine ma_band = "http://www.metal-archives.com/search?type=band_name&searchString="
+let searchengine ma_album = "http://www.metal-archives.com/search?type=album_title&searchString="
+let searchengine piratebay = "https://thepiratebay.gd/search/"
+let searchengine ebay_uk = "http://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_sacat=0&_nkw="
+let searchengine youtube = "https://www.youtube.com/results?search_query="
+let searchengine psychocydd = "http://psychocydd.co.uk/torrents.php?search="
+let searchengine google = "https://www.google.com/?gws_rd=ssl#q="
+let searchengine wikipaedia = "https://en.wikipedia.org/w/index.php?search="
+let searchalias ps = "psychocydd"
+let searchalias yt = "youtube"
+let searchalias eb = "ebay_uk"
+let searchalias ma = "ma_band"
+let searchalias maa = "ma_album"
+let searchalias pb = "piratebay"
+let searchalias gg = "google"
+let searchalias wk = "wikipaedia"
+let defaultengine = "startpage"
