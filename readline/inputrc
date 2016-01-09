@@ -1,0 +1,28 @@
+# want vi to be the default editor for readline                      
+$include /etc/inputrc
+set editing-mode vi                                            
+
+# vi settings                                         
+$if mode=vi                
+    set keymap vi-command                                 
+    "\C-x\C-r": re-read-init-file
+#    "gg": beginning-of-history
+    "\C-r": reverse-search-history
+    "\C-a": beginning-of-line
+    "\C-k": kill-line
+    "\C-e": end-of-line
+#    "l": backward-char
+#    "h": forward-char         
+#    "G": end-of-history
+    # insert mode             
+
+    set keymap vi-insert                          
+    "\C-x\C-r": re-read-init-file
+    "\C-k": kill-line
+#    "gg": beginning-of-history
+    "\C-r": reverse-search-history
+    "\C-a": beginning-of-line
+    "\C-e": end-of-line
+#    "G": end-of-history
+    "';": vi-movement-mode # remap escape   
+$endif 
