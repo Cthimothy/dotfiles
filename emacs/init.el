@@ -10,7 +10,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/ext/")
-(add-to-list 'load-path "~/.emacs.d/evil/")
+;(add-to-list 'load-path "~/.emacs.d/evil/")
 
 (setq custom-safe-themes t) ;; Set safe themes
 
@@ -25,14 +25,17 @@
   (setq twittering-use-master-password t)
   (setq twittering-icon-mode t)
   (setq twittering-use-icon-storage t)
-  (twittering-enable-unread-status-notifier))
+  (twittering-enable-unread-status-notifier)
+  (require 'powerline)
+  (powerline-center-theme 1))
 
 ;; Configure smart-powerline
 ;(smart-mode-line-enable)
 ;(setq sml/theme 'respectful)
 ;(sml/setup)
 
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "chromium") ;; Set Chromium as default web browser
+
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome") ;; Set Chromium as default web browser
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -40,48 +43,118 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
-        [default bold shadow italic underline bold bold-italic bold])
+   [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
-        ["#3C3836" "#FB4934" "#B8BB26" "#FABD2F" "#83A598" "#D3869B" "#8EC07C" "#EBDBB2"])
+   ["#3C3836" "#FB4934" "#B8BB26" "#FABD2F" "#83A598" "#D3869B" "#8EC07C" "#EBDBB2"])
  '(bongo-enabled-backends (quote (mplayer)))
  '(custom-safe-themes
-        (quote
-         ("2916d16e583c17bb2a1a9d231ea8ddcb3577f8cb97179eea689e91036213ff03" "d8f76414f8f2dcb045a37eb155bfaa2e1d17b6573ed43fb1d18b936febc7bbc2" "be12ee454ed13cad92242fb40056f078cc0588b8b91e3786f1ca324f49ad23d0" "644ed69719df244e3e979d413fbb3d94c4436d9df7c854ae1b9b1720b5c425ac" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "ca0ded1dd264eda215a721e5384d4cf0bb1a4554ba4a74a9e43d3cd036677315" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "f99abfd9afc4cce46de08829a868026ccd9cf0655d3b67a4732834d7386c71e2" "ac5584b12254623419499c3a7a5388031a29be85a15fdef9b94df2292d3e2cbb" "4f5bb895d88b6fe6a983e63429f154b8d939b4a8c581956493783b2515e22d6d" "5d1434865473463d79ee0523c1ae60ecb731ab8d134a2e6f25c17a2b497dd459" "c016e9b59f3a5d4a2b61f6b3076f8517fd71455f1f4509ba3b6dae3ab1016eab" "ad950f1b1bf65682e390f3547d479fd35d8c66cafa2b8aa28179d78122faa947" "51e228ffd6c4fff9b5168b31d5927c27734e82ec61f414970fc6bcce23bc140d" "08efabe5a8f3827508634a3ceed33fa06b9daeef9c70a24218b70494acdf7855" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "bac3f5378bc938e96315059cd0488d6ef7a365bae73dac2ff6698960df90552d" "1934bf7e1713bf706a9cb36cc6a002741773aa42910ca429df194d007ee05c67" "7dd515d883520286fc8936ce32381fb01b978d0d7cfb6fe56f7f55d8accbf63a" "49eea2857afb24808915643b1b5bd093eefb35424c758f502e98a03d0d3df4b1" "2a12e95e9ee6ed57592e7df12f3f028205575e9b3affdb5e6fa589421c618136" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" default)))
+   (quote
+    ("36d92f830c21797ce34896a4cf074ce25dbe0dabe77603876d1b42316530c99d" "b04425cc726711a6c91e8ebc20cf5a3927160681941e06bc7900a5a5bfe1a77f" "12b4427ae6e0eef8b870b450e59e75122d5080016a9061c9696959e50d578057" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "2916d16e583c17bb2a1a9d231ea8ddcb3577f8cb97179eea689e91036213ff03" "d8f76414f8f2dcb045a37eb155bfaa2e1d17b6573ed43fb1d18b936febc7bbc2" "be12ee454ed13cad92242fb40056f078cc0588b8b91e3786f1ca324f49ad23d0" "644ed69719df244e3e979d413fbb3d94c4436d9df7c854ae1b9b1720b5c425ac" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "ca0ded1dd264eda215a721e5384d4cf0bb1a4554ba4a74a9e43d3cd036677315" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" "fe6330ecf168de137bb5eddbf9faae1ec123787b5489c14fa5fa627de1d9f82b" "f99abfd9afc4cce46de08829a868026ccd9cf0655d3b67a4732834d7386c71e2" "ac5584b12254623419499c3a7a5388031a29be85a15fdef9b94df2292d3e2cbb" "4f5bb895d88b6fe6a983e63429f154b8d939b4a8c581956493783b2515e22d6d" "5d1434865473463d79ee0523c1ae60ecb731ab8d134a2e6f25c17a2b497dd459" "c016e9b59f3a5d4a2b61f6b3076f8517fd71455f1f4509ba3b6dae3ab1016eab" "ad950f1b1bf65682e390f3547d479fd35d8c66cafa2b8aa28179d78122faa947" "51e228ffd6c4fff9b5168b31d5927c27734e82ec61f414970fc6bcce23bc140d" "08efabe5a8f3827508634a3ceed33fa06b9daeef9c70a24218b70494acdf7855" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "bac3f5378bc938e96315059cd0488d6ef7a365bae73dac2ff6698960df90552d" "1934bf7e1713bf706a9cb36cc6a002741773aa42910ca429df194d007ee05c67" "7dd515d883520286fc8936ce32381fb01b978d0d7cfb6fe56f7f55d8accbf63a" "49eea2857afb24808915643b1b5bd093eefb35424c758f502e98a03d0d3df4b1" "2a12e95e9ee6ed57592e7df12f3f028205575e9b3affdb5e6fa589421c618136" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" default)))
  '(fancy-battery-mode t)
  '(fci-rule-color "#37474f")
  '(hl-sexp-background-color "#1c1f26")
- '(ido-vertical-mode t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(nyan-mode t)
  '(pos-tip-background-color "#36473A")
  '(pos-tip-foreground-color "#FFFFC8")
  '(safe-local-variable-values
-        (quote
-         ((eval when
-                (fboundp
-                 (quote rainbow-mode))
-                (rainbow-mode 1)))))
+   (quote
+    ((eval when
+           (fboundp
+            (quote rainbow-mode))
+           (rainbow-mode 1)))))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(sml/mode-width
+   (if
+       (eq
+        (powerline-current-separator)
+        (quote arrow))
+       (quote right)
+     (quote full)))
+ '(sml/pos-id-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active1)
+     (:eval
+      (propertize " "
+                  (quote display)
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (car powerline-default-separator-dir)))
+                   (quote powerline-active1)
+                   (quote powerline-active2))))
+     (:propertize " " face powerline-active2))))
+ '(sml/pos-minor-modes-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active1)
+     (:eval
+      (propertize " "
+                  (quote display)
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (cdr powerline-default-separator-dir)))
+                   (quote powerline-active1)
+                   nil)))
+     (:propertize " " face sml/global))))
+ '(sml/pre-id-separator
+   (quote
+    (""
+     (:propertize " " face sml/global)
+     (:eval
+      (propertize " "
+                  (quote display)
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (car powerline-default-separator-dir)))
+                   nil
+                   (quote powerline-active1))))
+     (:propertize " " face powerline-active1))))
+ '(sml/pre-minor-modes-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active2)
+     (:eval
+      (propertize " "
+                  (quote display)
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (cdr powerline-default-separator-dir)))
+                   (quote powerline-active2)
+                   (quote powerline-active1))))
+     (:propertize " " face powerline-active1))))
+ '(sml/pre-modes-separator (propertize " " (quote face) (quote sml/modes)))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 25)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
-        (quote
-         ((20 . "#f36c60")
-          (40 . "#ff9800")
-          (60 . "#fff59d")
-          (80 . "#8bc34a")
-          (100 . "#81d4fa")
-          (120 . "#4dd0e1")
-          (140 . "#b39ddb")
-          (160 . "#f36c60")
-          (180 . "#ff9800")
-          (200 . "#fff59d")
-          (220 . "#8bc34a")
-          (240 . "#81d4fa")
-          (260 . "#4dd0e1")
-          (280 . "#b39ddb")
-          (300 . "#f36c60")
-          (320 . "#ff9800")
-          (340 . "#fff59d")
-          (360 . "#8bc34a"))))
+   (quote
+    ((20 . "#f36c60")
+     (40 . "#ff9800")
+     (60 . "#fff59d")
+     (80 . "#8bc34a")
+     (100 . "#81d4fa")
+     (120 . "#4dd0e1")
+     (140 . "#b39ddb")
+     (160 . "#f36c60")
+     (180 . "#ff9800")
+     (200 . "#fff59d")
+     (220 . "#8bc34a")
+     (240 . "#81d4fa")
+     (260 . "#4dd0e1")
+     (280 . "#b39ddb")
+     (300 . "#f36c60")
+     (320 . "#ff9800")
+     (340 . "#fff59d")
+     (360 . "#8bc34a"))))
  '(vc-annotate-very-old-color nil))
 
 ;; Load packages and initial config
@@ -146,7 +219,7 @@
      ;; #060525 is the background colour of my default face.
      (:foreground "#060525" :inherit bold))
     (((type tty))
-     (:foreground "blue")))
+     (:foreground "white")))
   "Face used to display the time in the mode line.")
 
 ;; This causes the current time in the mode line to be displayed in
@@ -240,17 +313,16 @@
 ;;    (switch-to-buffer-other-window this-buffer)
 ;;    (other-window -1))
 
-;; Set up Ido mode to work everywhere
-(ido-grid-mode 1)
-
-
-(require 'flx-ido)
+;; ;; Set Ido mode to work everywhere
+;; (require 'flx-ido)
 (ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-enable-flex-matching t)
-(setq ido-use-faces nil)
+;; (ido-everywhere 1)
+;; (flx-ido-mode )
+;; (ido-vertical-moe 1)
+;; ;;(ido-grid-mode 1)
+;; ;; disable ido faces to see flx highlights.
+;(setq ido-enable-flex-matching t)
+;; (setq ido-use-faces nil)
 
 
 ;; Remap ESC to ';
